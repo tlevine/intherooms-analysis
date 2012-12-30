@@ -1,3 +1,4 @@
+library(ggplot2)
 nyc <- map_data('state', region = c('new york', 'new jersey', 'connecticut', 'pennsylvania'))
 
 map.base <- ggplot() +

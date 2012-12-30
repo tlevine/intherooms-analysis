@@ -26,8 +26,10 @@ meeting$Fellowship <- fellowship(meeting$Fellowship)
 meeting$Day <- day(meeting$Day)
 meeting$Time <- time(meeting$Time)
 meeting$Meeting.Description.1 <- NULL
+meeting$Url.1 <- NULL
 
 meeting.search$Fellowship <- fellowship(meeting.search$Fellowship)
 meeting.search$Day <- day(meeting.search$Day)
 meeting.search$Time <- time(meeting.search$Time)
 meeting.search$meeting.search.Description.1 <- NULL
+meeting.search$Url.1 <- NULL
