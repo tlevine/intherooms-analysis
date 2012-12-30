@@ -19,13 +19,14 @@ plot.hour.of.week <- function(hour) {
         .base + aes(x = Longitude, y = Latitude, opacity = 0.2, color = Fellowship)
     } else {
         paste('No meetings for', pretty.time)
-        .base + aes(x = 0, y = 0)
+        .base + aes(x = 0, y = 0) +
+        xlab('Longitude') + ylab('Latitude')
     }
 }
 
 pdf('graphs/over.week.pdf', width = 11, height = 8.5)
 for (i in 1:length(hours.of.week)) {
-# for (i in 130:140) {
+# for (i in c(1:2,130:132)) {
     print(plot.hour.of.week(hours.of.week[i]))
 }
 dev.off()
