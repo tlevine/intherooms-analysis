@@ -9,5 +9,5 @@ p.hour.of.week <- alply(hours.of.week, 1, function(hour) {
 })
 
 pdf('graphs/over.week.pdf', width = 11, height = 8.5)
-print(p.hours.of.week)
+print(p.hour.of.week)
 dev.off()
