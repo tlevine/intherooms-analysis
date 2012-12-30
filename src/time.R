@@ -1,6 +1,6 @@
 hours.of.week <- seq(0, 7 * 24 - 0.5, 0.5)
 PRETTY.TIME <- data.frame(ugly = hours.of.week)
-PRETTY.TIME$day <- rep(levels(meeting$Day), each = 24)
+PRETTY.TIME$day <- rep(levels(meeting$Day), each = 48)
 PRETTY.TIME$time <- rep(paste(rep(0:23, each = 2), rep(c('00', '30'), 24), sep = ':'), 7)
 row.names(PRETTY.TIME) <- PRETTY.TIME$ugly
 PRETTY.TIME$ugly <- NULL
