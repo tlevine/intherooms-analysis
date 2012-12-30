@@ -14,7 +14,7 @@ time <- function(time.var) {
     # Time as hours since midnight
     laply(str_split(time.var, ':'), function(t) {
         if (length(t) == 2) {
-            t.num <- as.numeric(w)
+            t.num <- as.numeric(t)
             t.num[1] + t.num[2] / 60
         } else {
             NA
@@ -23,12 +23,11 @@ time <- function(time.var) {
 }
 
 meeting$Fellowship <- fellowship(meeting$Fellowship)
-meeting.info$Fellowship <- fellowship(meeting.info$Fellowship)
-
 meeting$Day <- day(meeting$Day)
-meeting.info$Day <- day(meeting.info$Day)
-
 meeting$Time <- time(meeting$Time)
-meeting.info$Time <- time(meeting.info$Time)
-
 meeting$Meeting.Description.1 <- NULL
+
+meeting.search$Fellowship <- fellowship(meeting.search$Fellowship)
+meeting.search$Day <- day(meeting.search$Day)
+meeting.search$Time <- time(meeting.search$Time)
+meeting.search$meeting.search.Description.1 <- NULL
