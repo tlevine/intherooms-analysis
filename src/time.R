@@ -24,6 +24,13 @@ plot.hour.of.week <- function(hour) {
     }
 }
 
+for (i in 1:length(hours.of.week)) {
+# for (i in c(1:2,130:132)) {
+    png(paste('graphs/over.week-', sprintf('%03d', i), '.png', sep = ''), width = 840, height = 600)
+    print(plot.hour.of.week(hours.of.week[i]))
+    dev.off()
+}
+
 pdf('graphs/over.week.pdf', width = 11, height = 8.5)
 for (i in 1:length(hours.of.week)) {
 # for (i in c(1:2,130:132)) {
